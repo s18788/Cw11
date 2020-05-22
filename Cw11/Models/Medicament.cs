@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Cw11.Models
 {
@@ -10,7 +7,7 @@ namespace Cw11.Models
 
         public Medicament()
         {
-            Prescription_MedicamentNavigation = new HashSet<Prescription_Medicament>();
+            PrescriptionMedicamentNavigation = new HashSet<PrescriptionMedicament>();
         }
 
         public int IdMedicament { get; set; }
@@ -19,7 +16,7 @@ namespace Cw11.Models
         public string Type { get; set; }
 
 
-        public virtual ICollection<Prescription_Medicament> Prescription_MedicamentNavigation { get; set; }
+        public virtual ICollection<PrescriptionMedicament> PrescriptionMedicamentNavigation { get; set; }
 
     }
 }

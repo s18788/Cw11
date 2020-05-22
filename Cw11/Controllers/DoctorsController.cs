@@ -1,12 +1,13 @@
 ﻿using Cw11.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Internal;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Cw11.Controllers
 {
     [ApiController]
+    [Route("api/doctors")]
     public class DoctorsController : ControllerBase
     {
 
@@ -40,7 +41,7 @@ namespace Cw11.Controllers
             return Ok("Doctor has been inserted to a database");
         }
 
-        [HttpPost]
+        [HttpPut]
         public IActionResult ModifyDoctor(Doctor doctor)
         {
             if (_context.Find<Doctor>(doctor.IdDoctor) == null)
@@ -69,8 +70,6 @@ namespace Cw11.Controllers
 
             return Ok("Doctor has been deleted");
         }
-
-
 
     }
 }
