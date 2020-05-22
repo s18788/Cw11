@@ -98,9 +98,9 @@ namespace Cw11.Models
             //Patient
 
             modelBuilder.Entity<Patient>().HasData(
-             new Patient { IdPatient = 1, FirstName = "Jan", LastName = "Andrzejewski", BirthDate = new DateTime(1980-02-02) },
-             new Patient { IdPatient = 2, FirstName = "Krzysztof", LastName = "Kowalewicz", BirthDate = new DateTime(1991-01-10) },
-             new Patient { IdPatient = 3, FirstName = "Marcin", LastName = "Andrzejewicz", BirthDate = new DateTime(1995-01-02) }
+             new Patient { IdPatient = 1, FirstName = "Jan", LastName = "Andrzejewski", BirthDate = new DateTime(1980,02,02) },
+             new Patient { IdPatient = 2, FirstName = "Krzysztof", LastName = "Kowalewicz", BirthDate = new DateTime(1991,01,10) },
+             new Patient { IdPatient = 3, FirstName = "Marcin", LastName = "Andrzejewicz", BirthDate = new DateTime(1995,01,02) }
              );
 
             //Medicament
@@ -117,10 +117,10 @@ namespace Cw11.Models
             //Prescription
 
             modelBuilder.Entity<Prescription>().HasData(
-             new Prescription { IdPrescription = 1, Date = new DateTime(2020-05-10), DueDate = new DateTime(2020-10-23), IdDoctor = 1, IdPatient = 2 },
-             new Prescription { IdPrescription = 2, Date = new DateTime(2020-05-20), DueDate = new DateTime(2020-06-10), IdDoctor = 1, IdPatient = 2 },
-             new Prescription { IdPrescription = 3, Date = new DateTime(2020-06-05), DueDate = new DateTime(2020-06-20), IdDoctor = 2, IdPatient = 1 },
-             new Prescription { IdPrescription = 4, Date = new DateTime(2020-03-01), DueDate = new DateTime(2020-04-25), IdDoctor = 3, IdPatient = 2 }
+             new Prescription { IdPrescription = 1, Date = new DateTime(2020,05,10), DueDate = new DateTime(2020,10,23), IdDoctor = 1, IdPatient = 2 },
+             new Prescription { IdPrescription = 2, Date = new DateTime(2020,05,20), DueDate = new DateTime(2020,06,10), IdDoctor = 1, IdPatient = 2 },
+             new Prescription { IdPrescription = 3, Date = new DateTime(2020,06,05), DueDate = new DateTime(2020,06,20), IdDoctor = 2, IdPatient = 1 },
+             new Prescription { IdPrescription = 4, Date = new DateTime(2020,03,01), DueDate = new DateTime(2020,04,25), IdDoctor = 3, IdPatient = 2 }
              );
 
             //PrescriptionMedicament

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cw11.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20200522204550_Script")]
+    [Migration("20200522212518_Script")]
     partial class Script
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -174,21 +174,21 @@ namespace Cw11.Migrations
                         new
                         {
                             IdPatient = 1,
-                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1976),
+                            BirthDate = new DateTime(1980, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FirstName = "Jan",
                             LastName = "Andrzejewski"
                         },
                         new
                         {
                             IdPatient = 2,
-                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1980),
+                            BirthDate = new DateTime(1991, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FirstName = "Krzysztof",
                             LastName = "Kowalewicz"
                         },
                         new
                         {
                             IdPatient = 3,
-                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1992),
+                            BirthDate = new DateTime(1995, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FirstName = "Marcin",
                             LastName = "Andrzejewicz"
                         });
@@ -224,32 +224,32 @@ namespace Cw11.Migrations
                         new
                         {
                             IdPrescription = 1,
-                            Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(2005),
-                            DueDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1987),
+                            Date = new DateTime(2020, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DueDate = new DateTime(2020, 10, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IdDoctor = 1,
                             IdPatient = 2
                         },
                         new
                         {
                             IdPrescription = 2,
-                            Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1995),
-                            DueDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(2004),
+                            Date = new DateTime(2020, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DueDate = new DateTime(2020, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IdDoctor = 1,
                             IdPatient = 2
                         },
                         new
                         {
                             IdPrescription = 3,
-                            Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(2009),
-                            DueDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1994),
+                            Date = new DateTime(2020, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DueDate = new DateTime(2020, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IdDoctor = 2,
                             IdPatient = 1
                         },
                         new
                         {
                             IdPrescription = 4,
-                            Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(2016),
-                            DueDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1991),
+                            Date = new DateTime(2020, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DueDate = new DateTime(2020, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IdDoctor = 3,
                             IdPatient = 2
                         });

@@ -131,9 +131,9 @@ namespace Cw11.Migrations
                 columns: new[] { "IdPatient", "BirthDate", "FirstName", "LastName" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1976), "Jan", "Andrzejewski" },
-                    { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1980), "Krzysztof", "Kowalewicz" },
-                    { 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1992), "Marcin", "Andrzejewicz" }
+                    { 1, new DateTime(1980, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "Jan", "Andrzejewski" },
+                    { 2, new DateTime(1991, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Krzysztof", "Kowalewicz" },
+                    { 3, new DateTime(1995, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "Marcin", "Andrzejewicz" }
                 });
 
             migrationBuilder.InsertData(
@@ -141,10 +141,10 @@ namespace Cw11.Migrations
                 columns: new[] { "IdPrescription", "Date", "DueDate", "IdDoctor", "IdPatient" },
                 values: new object[,]
                 {
-                    { 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(2009), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1994), 2, 1 },
-                    { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(2005), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1987), 1, 2 },
-                    { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1995), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(2004), 1, 2 },
-                    { 4, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(2016), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1991), 3, 2 }
+                    { 3, new DateTime(2020, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, 1 },
+                    { 1, new DateTime(2020, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 10, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, 2 },
+                    { 2, new DateTime(2020, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, 2 },
+                    { 4, new DateTime(2020, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), 3, 2 }
                 });
 
             migrationBuilder.InsertData(
