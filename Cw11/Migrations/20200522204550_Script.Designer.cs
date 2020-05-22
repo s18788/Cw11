@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cw11.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20200522201124_Script")]
+    [Migration("20200522204550_Script")]
     partial class Script
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

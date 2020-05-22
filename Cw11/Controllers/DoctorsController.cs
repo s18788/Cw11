@@ -30,9 +30,9 @@ namespace Cw11.Controllers
         public IActionResult AddDoctor(Doctor doctor)
         {
 
-            if (_context.Find<Doctor>(doctor) != null)
+            if (_context.Find<Doctor>(doctor.IdDoctor) != null)
             {
-                return NotFound("That doctor is already in a database");
+                return NotFound("Doctor with that Id already exists");
             }
 
             _context.Add<Doctor>(doctor);
@@ -44,28 +44,35 @@ namespace Cw11.Controllers
         [HttpPut]
         public IActionResult ModifyDoctor(Doctor doctor)
         {
-            if (_context.Find<Doctor>(doctor.IdDoctor) == null)
+
+            Doctor toUpdate = _context.Find<Doctor>(doctor.IdDoctor);
+
+            if (toUpdate == null)
             {
                 return NotFound("There is no such doctor in a database");
             }
 
-            _context.Update<Doctor>(doctor);
+            toUpdate.FirstName = doctor.FirstName;
+            toUpdate.LastName = doctor.LastName;
+            toUpdate.Email = doctor.Email;
+
+            _context.Update<Doctor>(toUpdate);
             _context.SaveChanges();
 
             return Ok("Doctor has been updated");
         }
 
         [HttpDelete]
-        public IActionResult DeleteDoctor(int IdDoctor)
+        public IActionResult DeleteDoctor(Doctor doctor)
         {
-            Doctor doctor = _context.Find<Doctor>(IdDoctor);
+            Doctor toDelete = _context.Find<Doctor>(doctor.IdDoctor);
 
-            if (doctor == null)
+            if (toDelete == null)
             {
                 return NotFound("There is no such doctor in a database");
             }
 
-            _context.Remove<Doctor>(doctor);
+            _context.Remove<Doctor>(toDelete);
             _context.SaveChanges();
 
             return Ok("Doctor has been deleted");
